@@ -22,7 +22,7 @@
           font: 50px Hervetica, serif; 
           } 
           
-          /*For About Tab*/
+         /*For About Tab*/
             
             .dropbtn {
     background-color: #4CAF50;
@@ -72,8 +72,8 @@
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .showAbout {display:block;}
             
-          
-           /* Dropdown Button */
+            
+             /* Dropdown Button */
 .dropbtn {
     background-color: #4CAF50;
     color: white;
@@ -100,6 +100,10 @@
     display: none;
     position: absolute;
     background-color: #f9f9f9;
+    width: 205px;
+    height: 300px;
+    margin: 10px;
+    border: 3px solid #73AD21;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
@@ -111,15 +115,14 @@
     text-decoration: none;
     display: block;
 }
-
-/* Change color of dropdown links on hover */
+            
+            /* Change color of dropdown links on hover */
 .dropdown-content a:hover {background-color: #f1f1f1}
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
-
-
-/*Events tab*/
+    
+            /*Events tab*/
             
             
                      /* Dropdown Button */
@@ -176,8 +179,8 @@
      <section class="page-header"> 
      <center> 
    <h1 class="project-name">MyGeoCruz</h1> 
-   
-               <div class="dropdown">
+     
+            <div class="dropdown">
   <button onclick="myAboutFunction()" class="dropbtn">About</button>
   <div id="myAboutDropdown" class="aboutdropdown-content">
     <a href="#">Mission Statement</a>
@@ -185,9 +188,8 @@
   </div>
               
  
- </div>
-       
-       
+ </div> 
+         
           <div class="dropdown">
   <button onclick="myFunction()" class="dropbtn">Locations</button>
   <div id="myDropdown" class="dropdown-content">
@@ -197,17 +199,24 @@
     <a href="#">Dining Halls</a>
     <a href="#">Study Spots</a>
     <a href="#">Hidden Spots</a>
+    <a href="#">Fun Spots</a>
   </div>
-  
-  <button onclick="myPicFunction()" class="dropbtn">Weekly Slug Pics</button>
-  <div id="myPicDropdown" class="picdropdown-content">
-    <a href="#">Last Week's Winner</a>
-    <a href="#">Week's Favorites</a>
-    <a href="#">All Week's Pictures</a>
-  </div>
-</div>
+              
+ 
+ </div> 
 
- <script>
+         <div class="picdropdown">
+              <button onclick="myPicFunction()" class="dropbtn">Weekly Slug Pics</button> 
+   <div id="myPicDropdown" class="picdropdown-content"> 
+     <a href="#">Last Week Winner</a> 
+     <a href="#">Week's Favorites</a>
+     <a href="#">All Pictures</a>
+     
+   </div> 
+    </div>
+         
+
+           <script>
         /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
 function myAboutFunction() {
@@ -228,14 +237,14 @@ window.onclick = function(event) {
     }
   }
 }
-  </script> 
+        </script>
+         
          
           <script>
         /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
 function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
-    
 }
 
 // Close the dropdown menu if the user clicks outside of it
@@ -253,8 +262,9 @@ window.onclick = function(event) {
   }
 }
         </script>
-        
-         <script>
+         
+               
+          <script>
         /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
 function myPicFunction() {
@@ -276,6 +286,7 @@ window.onclick = function(event) {
   }
 }
         </script>
+         
          
          <div id="map" style="width:1250px; height:1000px; position: relative; transform: translateZ(0px); background-color: rgb(229, 227, 223);"> 
          </div> 
