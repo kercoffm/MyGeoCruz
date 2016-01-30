@@ -42,8 +42,7 @@
         <div id="map" style="width:1250px; height:1000px; position: relative; transform: translateZ(0px); background-color: rgb(229, 227, 223);">
         </div>
         <script type="text/javascript">
-            
-            var map;
+              var map;
             function initMap() {
                 map = new google.maps.Map(document.getElementById('map'),{
                     center: {lat: 36.994209,lng:-122.059610},
@@ -52,31 +51,62 @@
                 });
              }
              
-              var latLng = {lat: 36.995567, lng: -122.058824};
-            
-        var coordinates = [
-            [36.995567,-122.058824, "McHenry Library"],
-            [36.999008,-122.055176, "crown college"],
-            [36.992996,-122.065201, "college 8"]
-        ];
         
-        function initMap() {
+        function initMap() 
+        {
+            var coordinates = [
+            [36.995567,-122.058824, 'McHenry Library', "https://karmatrendz.files.wordpress.com/2013/02/130213_mchenry_library_01.jpg"],
+            [36.999008,-122.055176, 'Cowell College'],
+            [36.999008,-122.055176, 'Crown College'],
+            [36.992996,-122.065201, 'College Eight'],
+            [36.995961,-122.052966,'Stevenson College'],
+            [36.999677,-122.053261, 'Merrill College'],
+            [36.994727,-122.065412, 'Porter College'],
+            [36.997826,-122.066469, 'Kresge College'],
+            [36.989312,-122.064425, 'Oakes College'],
+            [37.001788,-122.057368, 'College Nine'],
+            [37.000579,-122.058383, 'College Ten']
+        ];
+            
+            var markersArray = [];
+            var markers= {};
+            var latLng = {lat: 36.995567, lng: -122.058824};
             var myLatLng = latLng;
 
-            var map = new google.maps.Map(document.getElementById('map'), {
+            var map = new google.maps.Map(document.getElementById('map'), 
+            {
             zoom: 15,
             center: myLatLng
             });
 
-            for (var i = 0; i<coordinates.length; i++)
-            {                    
-            var marker = new google.maps.Marker({
-                position: new google.maps.LatLng(coordinates[i][0], coordinates[i][1]),
-                map: map,
-                title: 'newMark'
-            });
+            var marker, i;
+            var id= "programs";
+            for (i = 0; i<coordinates.length; i++)
+            { 
+                var id = "programs" +i;   
+                marker = new google.maps.Marker(
+                {
+                    position: new google.maps.LatLng(coordinates[i][0], coordinates[i][1]),
+                    title: "newMark",
+                    map:map,
+                    id: id,
+                    icon:"http://www.christielakekids.com/_images/new/blue_circle.png",
+                    url:coordinates[i][3],
+                    zIndex:100
+                });
+                
+                google.maps.event.addListener(marker,"mouseover", function(event)
+                {
+                    this.setIcon("https://karmatrendz.files.wordpress.com/2013/02/130213_mchenry_library_01.jpg");
+                });
+                google.maps.event.addListener(marker,"mouseout",function(event)
+                {
+                    this.setIcon("http://www.christielakekids.com/_images/new/blue_circle.png");
+                });
             }
         }
+        
+                google.maps.event.addDomListener(window, "load", initialize); 
         </script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaafZTEDo9ORQqbE-aw7x1y0GlLizn708&callback=initMap"
     async defer></script>
