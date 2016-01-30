@@ -300,7 +300,7 @@ window.onclick = function(event) {
                  }); 
               } 
                
-          
+          /* function used to put markers at given locations on the map*/
          function initMap()  
          { 
              var coordinates = [ 
@@ -316,21 +316,6 @@ window.onclick = function(event) {
              [37.001788,-122.057368, 'College Nine'], 
              [37.000579,-122.058383, 'College Ten'] 
          ]; 
-         
-         //This array is used to name the colleges when hovering over the slugs
-         var collegeTitle = [
-          "McHenry Library",
-          "Cowell College", 
-          "Crown College", 
-          "College Eight", 
-          "Stevenson College", 
-          "Merrill College", 
-          "Porter College", 
-          "Kresge College", 
-          "Oakes College", 
-          "College Nine", 
-          "College Ten"
-          ];
               
              var markersArray = []; 
              var markers= {}; 
@@ -351,7 +336,7 @@ window.onclick = function(event) {
                  marker = new google.maps.Marker( 
                  { 
                      position: new google.maps.LatLng(coordinates[i][0], coordinates[i][1]), 
-                     title: collegeTitle[i], 
+                     title: coordinates[i][2];
                      map:map, 
                      id: id, 
                      icon:"http://people.ucsc.edu/~kercoffm/newSlugLogoIcon.png", 
