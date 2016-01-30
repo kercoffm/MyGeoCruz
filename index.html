@@ -1,44 +1,46 @@
-<!DOCTYPE html> 
- <html lang="en-us"> 
-  <head> 
-     <meta charset="UTF-8"> 
-     <title>MyGeoCruz</title> 
-      
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> 
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen"> 
-     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'> 
-     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen"> 
-     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">--> 
-   </head> 
-   <body> 
-        <style>
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>MyGeoCruz</title>
+     
+   <!-- <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">-->
+  </head>
+  <body>
+      <style>
         .page-header h1{
           color: #00CCCC;  
         }
       </style>
-<section class="page-header"> 
-      <h1 class="project-name">MyGeoCruz</h1> 
-     <!--<h2 class="project-tagline">An interactive website that lets UCSC students know what&#39;s going on on campus and where cool places are at UCSC.</h2>--> 
-      <a href="https://github.com/kercoffm/MyGeoCruz" class="btn">View on GitHub</a> 
-       <a href="https://github.com/kercoffm/MyGeoCruz/zipball/master" class="btn">Download .zip</a> 
-      <a href="https://github.com/kercoffm/MyGeoCruz/tarball/master" class="btn">Download .tar.gz</a> 
-         <div id="map" style="width:1250px; height:1000px; position: relative; transform: translateZ(0px); background-color: rgb(229, 227, 223);"> 
-         </div> 
-         <script type="text/javascript"> 
-              
-            var map; 
-             function initMap() { 
-                map = new google.maps.Map(document.getElementById('map'),{ 
-                    center: {lat: 36.989211,lng: -122.060165}, 
-                     zoom:15 
-                     
-                }); 
-             } 
-        </script> 
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaafZTEDo9ORQqbE-aw7x1y0GlLizn708&callback=initMap" 
-    async defer></script> 
+    <section class="page-header">
+      <h1 class="project-name">MyGeoCruz</h1>
+      <!--<h2 class="project-tagline">An interactive website that lets UCSC students know what&#39;s going on on campus and where cool places are at UCSC.</h2>-->
+      <a href="https://github.com/kercoffm/MyGeoCruz" class="btn">View on GitHub</a>
+      <a href="https://github.com/kercoffm/MyGeoCruz/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/kercoffm/MyGeoCruz/tarball/master" class="btn">Download .tar.gz</a>
+        <div id="map" style="width:1250px; height:1000px; position: relative; transform: translateZ(0px); background-color: rgb(229, 227, 223);">
+        </div>
+        <script type="text/javascript">
+            
+            var map;
+            function initMap() {
+                map = new google.maps.Map(document.getElementById('map'),{
+                    center: {lat: 36.989211,lng: -122.060165},
+                    zoom:15
+                    
+                });
+             }
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaafZTEDo9ORQqbE-aw7x1y0GlLizn708&callback=initMap"
+    async defer></script>
 
-     </section> 
+    </section>
+
   
-  </body> 
-</html> 
+  </body>
+</html>
+
