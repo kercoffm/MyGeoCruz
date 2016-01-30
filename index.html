@@ -38,6 +38,32 @@
                     
                 });
              }
+             
+              var latLng = {lat: 36.995447, lng: -122.030796};
+            
+        var coordinates = [
+            [36.995567,-122.058824, "McHenry Library"],
+            [36.999008,-122.055176, "crown college"],
+            [36.992996,-122.065201, "college 8"]
+        ];
+        
+        function initMap() {
+            var myLatLng = latLng;
+
+            var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 15,
+            center: myLatLng
+            });
+
+            for (var i = 0; i<coordinates.length; i++)
+            {                    
+            var marker = new google.maps.Marker({
+                position: new google.maps.LatLng(coordinates[i][0], coordinates[i][1]),
+                map: map,
+                title: 'newMark'
+            });
+            }
+        }
         </script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaafZTEDo9ORQqbE-aw7x1y0GlLizn708&callback=initMap"
     async defer></script>
