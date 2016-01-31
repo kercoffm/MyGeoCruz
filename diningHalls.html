@@ -3,8 +3,75 @@
    <head> 
      <meta charset="UTF-8"> 
      <title>MyGeoCruz</title>
+       <style>
+         
+ul {
+    list-style-type: impact;
+    font-size: 150%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #00CCCC;
+}
+li {
+    float: left;
+}
+   
+           
+ul ul {
+    position:absolute;
+    display: none;
+}
+li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li:hover ul{
+    display:block;   
+}
+</style>
    </head> 
-   <body> 
+   <body>
+     
+    <div class="allMenus">
+
+       <ul>
+            
+           <li><a href="#"><b>Locations</b></a>
+            <ul>
+                <li><a href="colleges.html">Colleges</a></li>
+                <li><a href="libraries.html">Libraries</a></li>
+                <li><a href="cafes.html">Cafes</a></li>
+                <li><a href="diningHalls.html">Dining Halls</a></li>
+                <li><a href="studyspots.html">Study Spots</a></li>
+                <li><a href="hiddenSpots.html">Hidden Spots</a></li>
+                <li><a href="funSpots.html">Fun Spots</a></li>
+               </ul>
+           </li>
+           <li><a href="#"><b>Weekly Slug Pictures</b></a>
+                 <ul>
+                    <li><a href="#">This Week's Favorite's Pictures</a></li>
+               </ul>
+           </li>
+           <li><a href="#"><b>Events</b></a>
+               <ul>
+                 <li><a href="#">Weekly Events</a></li>
+               </ul>
+           </li>
+           <!--<ul style="float:right;list-style-type:none;">-->
+           <li><a class="active" href="#"><b>About</b></a>
+                 <ul>
+                <li><a href="#">Mission Statement</a></li>
+                <li><a href="#">Creators</a></li>  
+               </ul>
+               </li>
+           <li><a href="#"><b>Login/Sign-Up</b></a></li> 
+            <!--</ul>-->   
+        </ul>
+    </div> 
         <style> 
            html {  
    background: url(http://people.ucsc.edu/~kercoffm/Nature2Background.png) no-repeat center center fixed;  
@@ -13,266 +80,16 @@
    -o-background-size: cover; 
    background-size: cover; 
  } 
-         .page-header h1{ 
-           color: #00CCCC;   
-           font-size: 600%; 
-             
-         } 
+      
          .page-header button{ 
-          font: 50px Impact, serif; 
+          font: 50px Hervetica, serif; 
           } 
+       </style>
           
-         /*For About Tab*/
-            
-            .dropbtn {
-    background-color: #00b3b3;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
-/* Dropdown button on hover & focus */
-.dropbtn:hover, .dropbtn:focus {
-    background-color: #00b3b3;
-}
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-    position: relative;
-    display: inline-block;
-    z-index: 100
-}
-/* Dropdown Content (Hidden by Default) */
-.aboutdropdown-content {
-    display: none;
-    position: relative;
-    background-color: #f9f9f9;
-    width: 205px;
-    height: 100px;
-    margin: 10px;
-    border: 3px solid #008c8c;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-}
-/* Links inside the dropdown */
-.aboutdropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-            
-            /* Change color of dropdown links on hover */
-.aboutdropdown-content a:hover {background-color: #f1f1f1}
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.showAbout {display:block;}
-            
-            
-             /* Dropdown Button */
-.dropbtn {
-    background-color: #00b3b3;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
-/* Dropdown button on hover & focus */
-.dropbtn:hover, .dropbtn:focus {
-    background-color: #00b3b3;
-}
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-    position: relative;
-    display: inline-block;
-    z-index: 100
-}
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-    display: none;
-    position: relative;
-    background-color: #f9f9f9;
-    width: 205px;
-    height: 300px;
-    margin: 10px;
-    border: 3px solid #008c8c;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-}
-/* Links inside the dropdown */
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-            
-            /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #f1f1f1}
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {display:block;}
-    
-            /*Events tab*/
-            
-            
-                     /* Dropdown Button */
-.dropbtn {
-    background-color: #00b3b3;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
-/* Dropdown button on hover & focus */
-.dropbtn:hover, .dropbtn:focus {
-    background-color: #00b3b3;
-}
-/* The container <div> - needed to position the dropdown content */
-.picdropdown {
-    position: relative;
-    display: inline-block;
-    z-index: 100
-}
-/* Dropdown Content (Hidden by Default) */
-.picdropdown-content {
-    display: none;
-    position: relative;
-    background-color: #f9f9f9;
-    width: 205px;
-    height: 150px;
-    margin: 10px;
-    border: 3px solid #008c8c;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-}
-/* Links inside the dropdown */
-.picdropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-   
-            
-/* Change color of dropdown links on hover */
-.picdropdown-content a:hover {background-color: #f1f1f1}
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.showHere {display:block;}
-/* Control map window*/
-.map-info-window {
-     width:200px;
-     height:200px;
-}
-            
-       </style> 
-     <section class="page-header"> 
-     <center> 
-   <h1 class="project-name">MyGeoCruz</h1> 
-     
-            <div class="dropdown">
-  <button onclick="myAboutFunction()" class="dropbtn">About</button>
-  <div id="myAboutDropdown" class="aboutdropdown-content">
-    <a href="myBlah.html">Mission Statement</a>
-    <a href="#">Meet the Creators</a>
-  </div>
-              
- 
- </div> 
-         
-          <div class="dropdown">
-  <button onclick="myFunction()" class="dropbtn">Locations</button>
-  <div id="myDropdown" class="dropdown-content">
-    <a href="colleges.html">Colleges</a>
-    <a href="libraries.html">Libraries</a>
-    <a href="cafes.html">Cafes</a>
-    <a href="diningHalls.html">Dining Halls</a>
-    <a href="studyspots.html">Study Spots</a>
-    <a href="hiddenSpots.html">Hidden Spots</a>
-    <a href="funSpots.html">Fun Spots</a>
-  </div>
-              
- 
- </div> 
+        <center> 
+   <h1 class="project-name" style="color: #00CCCC; font-size: 600%;">My Geo Cruz</h1>
 
-         <div class="picdropdown">
-              <button onclick="myPicFunction()" class="dropbtn">Weekly Slug Pics</button> 
-   <div id="myPicDropdown" class="picdropdown-content"> 
-     <a href="#">Last Week Winner</a> 
-     <a href="#">Week's Favorites</a>
-     <a href="#">All Pictures</a>
-     
-   </div> 
-    </div>
-         
-
-           <script>
-        /* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
-function myAboutFunction() {
-    document.getElementById("myAboutDropdown").classList.toggle("show");
-}
-// Close the dropdown menu if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("aboutdropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('showAbout')) {
-        openDropdown.classList.remove('showAbout');
-      }
-    }
-  }
-}
-        </script>
-         
-         
-          <script>
-        /* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
-function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-}
-// Close the dropdown menu if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
-        </script>
-         
-               
-          <script>
-        /* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
-function myPicFunction() {
-    document.getElementById("myPicDropdown").classList.toggle("showHere");
-}
-// Close the dropdown menu if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("picdropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('showHere')) {
-        openDropdown.classList.remove('showHere');
-      }
-    }
-  }
-}
-        </script>
-         
-         
-         <div id="map" style="width:1250px; height:1000px; position: relative; transform: translateZ(0px); background-color: rgb(229, 227, 223);"> 
+               <div id="map" style="width:1250px; height:1000px; position: relative; transform: translateZ(0px); background-color: rgb(229, 227, 223);"> 
          </div> 
          <script type="text/javascript"> 
                var map; 
