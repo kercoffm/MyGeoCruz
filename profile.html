@@ -1,4 +1,4 @@
- <!DOCTYPE html> 
+<!DOCTYPE html> 
  <html lang="en-us"> 
    <head> 
      <meta charset="UTF-8"> 
@@ -13,7 +13,6 @@ ul {
     overflow: hidden;
     background-color: #00CCCC;
 }
-
 li {
     float: left;
 }
@@ -23,7 +22,6 @@ ul ul {
     position:absolute;
     display: none;
 }
-
 li a {
     display: inline-block;
     color: white;
@@ -31,11 +29,6 @@ li a {
     padding: 14px 16px;
     text-decoration: none;
 }
-
-
-
-
-
 li:hover ul{
     display:block;   
 }
@@ -97,19 +90,17 @@ li:hover ul{
    <h1 class="project-name" style="color: #00CCCC; font-size: 600%;">My Geo Cruz</h1>
        </center>
        
-    <h2>Profile</h2>
-        <p id="demo"></p>
-        <p id = "classes"> </p>
+    <h2 class="project-name" style="color: #00CCCC; font-size: 200%;">Profile</h2>
+        <p id="demo" class="project-name" style="color: white; font-size: 150%;"> </p>
+        <h2 class="project-name" style="color: #00CCCC; font-size: 200%;">Find Your Classmates</h2>
+        <p id = "classes" class="project-name" style="color: white; font-size: 150%;"> </p>
         <script>
-
           //make users: name, username,classes (JSON)
       var user = {"profile":[ 
           {"name":"Sammy Slug","username":"slugg123","class1":"Chem 1A" ,"class2":"Math" ,"class3":"History" }, 
           {"name":"Anna Smith","username":"asmith","class1":"History","class2":"Math" ,"class3":"Chem 1A"  }, 
           {"name":"Kelsey Coffman","username":"kercoffman","class1":"Math","class2":"History","class3":"History" }, 
           {"name":"Peter Lee","username":"peteL","class1":"Chem 1A","class2":"Math","class3":"History" } ]};
-
-
             //get all elements, then put in a profile page
             
               document.getElementById("demo").innerHTML =
@@ -119,7 +110,6 @@ li:hover ul{
               user.profile[0].class2 + "<br>" + 
               user.profile[0].class3 + "<br>" ;
             
-
         var ucscClass = {"myClass":[[], [], [] ]};
  
         //auto save name to class directory
@@ -143,7 +133,7 @@ li:hover ul{
             }
             
             document.getElementById("classes").innerHTML =
-                "<h2>Find Your Classmates! </h2>" + " <br> "+ "<u>Chem 1A</u> " + "<br>" + ucscClass.myClass[0]
+                "<u>Chem 1A</u> " + "<br>" + ucscClass.myClass[0]
                     + " <br> "+ "<u>Math</u> " + "<br>" + ucscClass.myClass[1]
             + " <br> "+ "<u>History</u> " + "<br>" + ucscClass.myClass[2];
             
@@ -153,6 +143,3 @@ li:hover ul{
             
    </body> 
 </html> 
-      
-
-
