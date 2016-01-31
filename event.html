@@ -1,1 +1,311 @@
+<!DOCTYPE html> 
+ <html lang="en-us"> 
+   <head> 
+     <meta charset="UTF-8"> 
+     <title>MyGeoCruz</title>
+       <style>
+         
+ul {
+    list-style-type: impact;
+    font-size: 150%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #00CCCC;
+}
+li {
+    float: left;
+}
+   
+           
+ul ul {
+    position:absolute;
+    display: none;
+}
+li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li:hover ul{
+    display:block;   
+}
+</style>
+   </head> 
+   <body>
+     
+    <div class="allMenus">
+
+       <ul>
+            
+           <li><a href="#"><b>Locations</b></a>
+            <ul>
+                <li><a href="colleges.html">Colleges</a></li>
+                <li><a href="libraries.html">Libraries</a></li>
+                <li><a href="cafes.html">Cafes</a></li>
+                <li><a href="diningHalls.html">Dining Halls</a></li>
+                <li><a href="studyspots.html">Study Spots</a></li>
+                <li><a href="hiddenSpots.html">Hidden Spots</a></li>
+                <li><a href="funSpots.html">Fun Spots</a></li>
+               </ul>
+           </li>
+           <li><a href="#"><b>Weekly Slug Pictures</b></a>
+                 <ul>
+                    <li><a href="#">This Week's Favorite's Pictures</a></li>
+               </ul>
+           </li>
+           <li><a href="#"><b>Events</b></a>
+               <ul>
+                 <li><a href="#">Weekly Events</a></li>
+               </ul>
+           </li>
+           <!--<ul style="float:right;list-style-type:none;">-->
+           <li><a class="active" href="#"><b>About</b></a>
+                 <ul>
+                <li><a href="#">Mission Statement</a></li>
+                <li><a href="#">Creators</a></li>  
+               </ul>
+               </li>
+           <li><a href="profile.html"><b>Login/Sign-Up</b></a></li> 
+            <!--</ul>-->   
+        </ul>
+    </div> 
+        <style> 
+           html {  
+   background: url(http://people.ucsc.edu/~kercoffm/WeeklySlugPictures/BACKGROUND3.png) no-repeat center center fixed;  
+   -webkit-background-size: cover; 
+   -moz-background-size: cover; 
+   -o-background-size: cover; 
+   background-size: cover; 
+ } 
+      
+         .page-header button{ 
+          font: 50px Hervetica, serif; 
+          } 
+       </style>
+          
+        <center> 
+   <h1 class="project-name" style="color: #00CCCC; font-size: 600%;">My Geo Cruz</h1>
+
+               <div id="map" style="width:1250px; height:1000px; position: relative; transform: translateZ(0px); background-color: rgb(229, 227, 223);"> 
+         </div> 
+         <script type="text/javascript"> 
+               var map; 
+             function initMap() { 
+                 map = new google.maps.Map(document.getElementById('map'),{ 
+                     center: {lat: 36.994209,lng:-122.059610}, 
+                     zoom:15 
+                      
+                 }); 
+              } 
+               
+          /* function used to put markers at given locations on the map*/
+         function initMap()  
+         { 
+             var coordinates = [ 
+             [36.996729,-122.054251, 'Cowell College'], 
+             [36.999008,-122.055176, 'Crown College'], 
+             [36.990888,-122.064897, 'College Eight'], 
+             [36.995961,-122.052966,'Stevenson College'], 
+             [36.999677,-122.053261, 'Merrill College'], 
+             [36.994727,-122.065412, 'Porter College'], 
+             [36.997826,-122.066469, 'Kresge College'], 
+             [36.989312,-122.064425, 'Oakes College'], 
+             [37.001788,-122.057368, 'College Nine'], 
+             [37.000579,-122.058383, 'College Ten'],
+             ]; 
+         /* Info Box informations */
+         
+           var infoWindowContent =[
+            ['<div class= "map-info-window">'+
+             '<div id="content">'+
+             '<div id="siteNotice">'+
+             '</div>'+
+             '<h1 id="firstHeading" class="firstHeading" style="font-size:25px; color:cadetblue; font-weight:bold;">Hula Dancing</h1>'+
+             '<img src= "http://people.ucsc.edu/~kercoffm/cowellLocation.jpg">'+
+             '<div id="bodyContent">'+
+             '<p>Where: Next to the Mother Earth Picture at Cowell</p>'+
+             '<p>When: Tuesday, February 2nd</p>' +
+             '<p>Time: 4pm - 5pm</p>' +
+             '<p>Info: Hula Hoop the longest for prices!</p>' +
+             '</div>'+
+             '</div>'],  
+            ['<div class= "map-info-window">'+
+             '<div id="content">'+
+             '<div id="siteNotice">'+
+             '</div>'+
+             '<h1 id="firstHeading" class="firstHeading" style="font-size:25px; color:cadetblue; font-weight:bold;">Chess Club</h1>'+
+             '<img src= "http://people.ucsc.edu/~kercoffm/crownCollege.png">'+
+             '<div id="bodyContent">'+
+             '<p>Where: Classroom 201</p>'+
+             '<p>When: Wednesday, February 3rd</p>' +
+             '<p>Time: 3pm - 5pm</p>' +
+             '<p>Info: Weekly Chess Club meeting</p>' +
+             '</div>'+
+             '</div>'],
+             ['<div class= "map-info-window">'+
+             '<div id="content">'+
+             '<div id="siteNotice">'+
+             '</div>'+
+             '<h1 id="firstHeading" class="firstHeading" style="font-size:25px; color:cadetblue; font-weight:bold;">Make your own Valentine Card!</h1>'+
+             '<img src= "http://people.ucsc.edu/~kercoffm/collegeEight.png">'+
+             '<div id="bodyContent">'+
+             '<p>Where: Red Room</p>'+
+             '<p>When: Friday, February 5th</p>' +
+             '<p>Time: 5pm - 7pm</p>' +
+             '<p>Info: Craft your own card to your valentine this year</p>' +
+             '</div>'+
+             '</div>'],
+            ['<div class= "map-info-window">'+
+             '<div id="content">'+
+             '<div id="siteNotice">'+
+             '</div>'+
+             '<h1 id="firstHeading" class="firstHeading" style="font-size:25px; color:cadetblue; font-weight:bold;">Bets on SuperBowl</h1>'+
+             '<img src= "http://people.ucsc.edu/~kercoffm/stevensonCollege.png">'+
+             '<div id="bodyContent">'+
+             '<p>Where: Stevenson Cafe</p>'+
+             '<p>When: Friday, February 5th.</p>' +
+             '<p>Time: 9pm-10pm</p>' +
+             '<p>Info: Make bets for this Sunday to get prizes!</p>' +
+             '</div>'+
+             '</div>'],  
+            ['<div class= "map-info-window">'+
+             '<div id="content">'+
+             '<div id="siteNotice">'+
+             '</div>'+
+             '<h1 id="firstHeading" class="firstHeading" style="font-size:25px; color:cadetblue; font-weight:bold;">Smoothie Groovie</h1>'+
+             '<img src= "http://people.ucsc.edu/~kercoffm/merril%20college.png">'+
+             '<div id="bodyContent">'+
+             '<p>Where: Outside of Cafe</p>'+
+             '<p>When: Thursday, February 4th.</p>' +
+             '<p>Time: 4pm - 7pm</p>' +
+             '<p>Info: Dance off while trying some healthy smoothies!</p>' +
+             '</div>'+
+             '</div>'], 
+            ['<div class= "map-info-window">'+
+             '<div id="content">'+
+             '<div id="siteNotice">'+
+             '</div>'+
+             '<h1 id="firstHeading" class="firstHeading" style="font-size:25px; color:cadetblue; font-weight:bold;">Make Your Valentine Giftbag</h1>'+
+             '<img src= "http://people.ucsc.edu/~kercoffm/porterCollege.png">'+
+             '<div id="bodyContent">'+
+             '<p>Where: Hitchcock Lounge</p>'+
+             '<p>When: Monday, February 1st.</p>' +
+             '<p>Time: 5pm - 7pm</p>' +
+             '<p>Info: Make cute goody bags"</p>' +
+             '</div>'+
+             '</div>'],
+            ['<div class= "map-info-window">'+
+             '<div id="content">'+
+             '<div id="siteNotice">'+
+             '</div>'+
+             '<h1 id="firstHeading" class="firstHeading" style="font-size:25px; color:cadetblue; font-weight:bold;">LGBT Rally</h1>'+
+             '<img src= "http://people.ucsc.edu/~kercoffm/kresgeCollege.png">'+
+             '<div id="bodyContent">'+
+             '<p>Where: Next to STARTS</p>'+
+             '<p>When: Tuesday, February 2nd.</p>' +
+             '<p>Time: 7pm - 9pm</p>' +
+             '<p>Info: Come protest with us for justice!</p>' +
+             '</div>'+
+             '</div>'],
+            ['<div class= "map-info-window">'+
+             '<div id="content">'+
+             '<div id="siteNotice">'+
+             '</div>'+
+             '<h1 id="firstHeading" class="firstHeading"style="font-size:25px; color:cadetblue; font-weight:bold;">Salsita</h1>'+
+             '<img src= "http://people.ucsc.edu/~kercoffm/oaksCollege.png">'+
+             '<div id="bodyContent" style="font-size:14">'+
+             '<p>Where: Courtyard'+
+             '<p>When: Sunday. January 31st.</p>' +
+             '<p>Time: 3pm - 5 pm</p>' +
+             '<p>Info: Weekly Salsita club meeting</p>' +
+             '</div>'+
+             '</div>'],
+            ['<div class= "map-info-window">'+
+             '<div id="content">'+
+             '<div id="siteNotice">'+
+             '</div>'+
+             '<h1 id="firstHeading" class="firstHeading"style="font-size:25px; color:cadetblue; font-weight:bold;">HACK 2016</h1>'+
+             '<img src= "http://people.ucsc.edu/~kercoffm/collegeNine.png">'+
+             '<div id="bodyContent">'+
+             '<p>Where: 9/10 Multipurpose Room</p>'+
+             '<p>When: Friday January 29th-January 30th</p>' +
+             '<p>Time: 4pm - 12pm</p>' +
+             '<p>Info: Test your coding skill in limited time whilw winning cool prizes!</p>' +
+             '</div>'+
+             '</div>'],
+             ['<div class= "map-info-window">'+
+             '<div id="content">'+
+             '<div id="siteNotice">'+
+             '</div>'+
+             '<h1 id="firstHeading" class="firstHeading"style="font-size:25px; color:cadetblue; font-weight:bold;">Boba Fundraiser</h1>'+
+             '<img src= "http://people.ucsc.edu/~kercoffm/collegeTen.png">'+
+             '<div id="bodyContent">'+
+             '<p>Where: Next to the Mother Earth Picture at Cowell</p>'+
+             '<p>When: Wednesday, February 3rd.</p>' +
+             '<p>Time: 4pm - 5pm</p>' +
+             '<p>Info: Come get some delicious boba!</p>' +
+             '</div>'+
+             '</div>']
+             ];
+    
+             var infoWindow = new google.maps.InfoWindow({content: infoWindowContent});
+             /*var markersArray = [];*/ 
+             /*var markers= {}; */
+             var latLng = {lat: 36.995567, lng: -122.058824}; 
+             var myLatLng = latLng; 
+  
+             var map = new google.maps.Map(document.getElementById('map'),  
+             { 
+             zoom: 15, 
+             center: myLatLng 
+             }); 
+  
+             var marker, i; 
+             var id= "programs"; 
+             for (i = 0; i<coordinates.length; i++) 
+             {  
+                 var id = "programs" +i;    
+                 marker = new google.maps.Marker( 
+                 { 
+                     position: new google.maps.LatLng(coordinates[i][0], coordinates[i][1]), 
+                     title: coordinates[i][2],
+                     map:map, 
+                     id: id, 
+                     icon:"http://people.ucsc.edu/~kercoffm/newSlugLogoIcon.png", 
+                     url:coordinates[i][3], 
+                     zIndex:100, 
+                     info: infoWindowContent[i][0]
+                 }); 
+                  
+                google.maps.event.addListener(marker,"mouseover", function() {
+                infoWindow.setContent(this.info);
+                infoWindow.open(map,this);
+                 });
+                 
+                 google.maps.event.addListener(marker,"mouseout",function(event) 
+                 { 
+                     this.setIcon("http://people.ucsc.edu/~kercoffm/newSlugLogoIcon.png"); 
+                 }); 
+                 marker.addListener('click', function() {
+                 infoWindow.open(map, marker);
+                 infoWindow.open(map,this);
+              });    
+           } 
+         } 
+          
+                 google.maps.event.addDomListener(window, "load", initialize);  
+         </script> 
+         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaafZTEDo9ORQqbE-aw7x1y0GlLizn708&callback=initMap" 
+     async defer></script> 
+          </center> 
+     </section> 
+ 
+ 
+    
+   </body> 
+</html> 
+
 
