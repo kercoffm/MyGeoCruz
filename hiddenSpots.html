@@ -1,8 +1,16 @@
 <!DOCTYPE html> 
+ <!-- Some of our code we did ourselves and others we would use code from OpenSource websites 
+ if we didn't understand or know how to do something such W3 Schools, OverStackFlow,Google Map API, 
+ Google images, and developers websites. We also had some help when we had some simple syntax errors 
+ and couldn't find the answers online from one of the mentors, Erik. Due to time constraints, 
+ we didn't have time to comment along the way. I will try my best to comment what our code does 
+ and where any code we used came from, but in a quick manner because of lack of time. -Kelsey -->
  <html lang="en-us"> 
    <head> 
      <meta charset="UTF-8"> 
      <title>MyGeoCruz</title>
+     <!--This style format and code I got from W3 schools navigation bars. I used this code then put in my own boundaries on
+      the attributes used. This code makes the horizontal navigation bar menu.-->
        <style>
          
 ul {
@@ -35,7 +43,10 @@ li:hover ul{
 </style>
    </head> 
    <body>
-     
+       <!-- This is the code for all the drop down menus. This code I found on an opensource website that explained how to 
+     do dropdown menus for navigation bar horizontal. In order to due that, the website explained to use inner <ul>s, created
+     the list for the dropdown menus. I made sure to add in my own code to create the website, put it in a <div> in a class= allMenus,
+     and got rid of any bullet points that were showing up on the site. -->
     <div class="allMenus">
 
        <ul style="list-style-type: none;">
@@ -72,6 +83,7 @@ li:hover ul{
             <!--</ul>-->   
         </ul>
     </div> 
+      <!--This style controls the background -->
         <style> 
            html {  
    background: url(http://people.ucsc.edu/~kercoffm/WeeklySlugPictures/BACKGROUND3.png) no-repeat center center fixed;  
@@ -89,6 +101,8 @@ li:hover ul{
         <center> 
    <h1 class="project-name" style="color: #00CCCC; font-size: 600%;">My Geo Cruz</h1>
 
+    <!-- The code below has been founded by Google Map API and we used it to make our map, markers, and hover, info Windows to 
+    create our website by putting in our information --> 
                <div id="map" style="width:1250px; height:1000px; position: relative; transform: translateZ(0px); background-color: rgb(229, 227, 223);"> 
          </div> 
          <script type="text/javascript"> 
@@ -113,6 +127,7 @@ li:hover ul{
              ]; 
          /* Info Box informations */
          
+            //An array for the info Windowns when you hover over a marker.
            var infoWindowContent =[
             ['<div class= "map-info-window">'+
              '<div id="content">'+
@@ -165,7 +180,7 @@ li:hover ul{
              '</div>'+
              '</div>']
              ];
-             
+             //Code below is also used from Google Map API and this creates the markers and hover info Windows.
              var infoWindow = new google.maps.InfoWindow({content: infoWindowContent});
              /*var markersArray = [];*/ 
              /*var markers= {}; */
@@ -194,12 +209,12 @@ li:hover ul{
                      zIndex:100, 
                      info: infoWindowContent[i][0]
                  }); 
-                  
+                //When hovered over marker, window pops up
                 google.maps.event.addListener(marker,"mouseover", function() {
                 infoWindow.setContent(this.info);
                 infoWindow.open(map,this);
                  });
-                 
+                //When not hovered over marker, just continues to show slug icon marker
                  google.maps.event.addListener(marker,"mouseout",function(event) 
                  { 
                      this.setIcon("http://people.ucsc.edu/~kercoffm/newSlugLogoIcon.png"); 
