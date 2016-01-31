@@ -1,1 +1,410 @@
 
+ <!DOCTYPE html> 
+ <html lang="en-us"> 
+   <head> 
+     <meta charset="UTF-8"> 
+     <title>MyGeoCruz</title>
+   </head> 
+   <body> 
+        <style> 
+           html {  
+   background: url(http://people.ucsc.edu/~kercoffm/Nature2Background.png) no-repeat center center fixed;  
+   -webkit-background-size: cover; 
+   -moz-background-size: cover; 
+   -o-background-size: cover; 
+   background-size: cover; 
+ } 
+         .page-header h1{ 
+           color: #00CCCC;   
+           font-size: 600%; 
+             
+         } 
+         .page-header button{ 
+          font: 50px Impact, serif; 
+          } 
+          
+         /*For About Tab*/
+            
+            .dropbtn {
+    background-color: #00b3b3;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #00b3b3;
+}
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    z-index: 100
+}
+/* Dropdown Content (Hidden by Default) */
+.aboutdropdown-content {
+    display: none;
+    position: relative;
+    background-color: #f9f9f9;
+    width: 205px;
+    height: 100px;
+    margin: 10px;
+    border: 3px solid #008c8c;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+/* Links inside the dropdown */
+.aboutdropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+            
+            /* Change color of dropdown links on hover */
+.aboutdropdown-content a:hover {background-color: #f1f1f1}
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.showAbout {display:block;}
+            
+            
+             /* Dropdown Button */
+.dropbtn {
+    background-color: #00b3b3;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #00b3b3;
+}
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    z-index: 100
+}
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: relative;
+    background-color: #f9f9f9;
+    width: 205px;
+    height: 300px;
+    margin: 10px;
+    border: 3px solid #008c8c;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+            
+            /* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+    
+            /*Events tab*/
+            
+            
+                     /* Dropdown Button */
+.dropbtn {
+    background-color: #00b3b3;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #00b3b3;
+}
+/* The container <div> - needed to position the dropdown content */
+.picdropdown {
+    position: relative;
+    display: inline-block;
+    z-index: 100
+}
+/* Dropdown Content (Hidden by Default) */
+.picdropdown-content {
+    display: none;
+    position: relative;
+    background-color: #f9f9f9;
+    width: 205px;
+    height: 150px;
+    margin: 10px;
+    border: 3px solid #008c8c;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+/* Links inside the dropdown */
+.picdropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+   
+            
+/* Change color of dropdown links on hover */
+.picdropdown-content a:hover {background-color: #f1f1f1}
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.showHere {display:block;}
+/* Control map window*/
+.map-info-window {
+     width:200px;
+     height:200px;
+}
+            
+       </style> 
+     <section class="page-header"> 
+     <center> 
+   <h1 class="project-name">MyGeoCruz</h1> 
+     
+            <div class="dropdown">
+  <button onclick="myAboutFunction()" class="dropbtn">About</button>
+  <div id="myAboutDropdown" class="aboutdropdown-content">
+    <a href="myBlah.html">Mission Statement</a>
+    <a href="#">Meet the Creators</a>
+  </div>
+              
+ 
+ </div> 
+         
+          <div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Locations</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#">Colleges</a>
+    <a href="#">Libraries</a>
+    <a href="#">Cafes</a>
+    <a href="#">Dining Halls</a>
+    <a href="#">Study Spots</a>
+    <a href="#">Hidden Spots</a>
+    <a href="#">Fun Spots</a>
+  </div>
+              
+ 
+ </div> 
+
+         <div class="picdropdown">
+              <button onclick="myPicFunction()" class="dropbtn">Weekly Slug Pics</button> 
+   <div id="myPicDropdown" class="picdropdown-content"> 
+     <a href="#">Last Week Winner</a> 
+     <a href="#">Week's Favorites</a>
+     <a href="#">All Pictures</a>
+     
+   </div> 
+    </div>
+         
+
+           <script>
+        /* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myAboutFunction() {
+    document.getElementById("myAboutDropdown").classList.toggle("show");
+}
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("aboutdropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('showAbout')) {
+        openDropdown.classList.remove('showAbout');
+      }
+    }
+  }
+}
+        </script>
+         
+         
+          <script>
+        /* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+        </script>
+         
+               
+          <script>
+        /* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myPicFunction() {
+    document.getElementById("myPicDropdown").classList.toggle("showHere");
+}
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("picdropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('showHere')) {
+        openDropdown.classList.remove('showHere');
+      }
+    }
+  }
+}
+        </script>
+         
+         
+         <div id="map" style="width:1250px; height:1000px; position: relative; transform: translateZ(0px); background-color: rgb(229, 227, 223);"> 
+         </div> 
+         <script type="text/javascript"> 
+               var map; 
+             function initMap() { 
+                 map = new google.maps.Map(document.getElementById('map'),{ 
+                     center: {lat: 36.994209,lng:-122.059610}, 
+                     zoom:15 
+                      
+                 }); 
+              } 
+               
+          /* function used to put markers at given locations on the map*/
+         function initMap()  
+         { 
+             var coordinates = [ 
+             [36.994007,-122.065201,'Porter Study Room'],
+             [36.990463,-122.063355,'Oakes Learning Center'],
+             [36.991398,-122.064466,'College Eight Study Room'],
+             [36.997634,-122.066467,'Kresge Writing Center'],
+             [36.999443,-122.053056,'Merrill Academic Success']
+            ];
+         /* Info Box informations */
+         
+           var infoWindowContent =[
+            ['<div class= "map-info-window">'+
+             '<div id="content">'+
+             '<div id="siteNotice">'+
+             '</div>'+
+             '<p id="firstHeading" class="firstHeading" style="font-size:25px; color:cadetblue; font-weight:bold;">Porter Study Room</p>'+
+             '<img src= "http://people.ucsc.edu/~kercoffm/oakes.jpg">'+
+             '<div id="bodyContent">'+
+             '<p></p>'+
+             '</div>'+
+             '</div>'],
+            ['<div class= "map-info-window">'+
+             '<div id="content">'+
+             '<div id="siteNotice">'+
+             '</div>'+
+             '<h1 id="firstHeading" class="firstHeading" style="font-size:25px; color:cadetblue; font-weight:bold;">Oakes Learning Center</h1>'+
+             '<img src= "http://people.ucsc.edu/~kercoffm/college%20eight.jpg">'+
+             '<div id="bodyContent">'+
+             '<p></p>'+
+             '</div>'+
+             '</div>'],  
+            ['<div class= "map-info-window">'+
+             '<div id="content">'+
+             '<div id="siteNotice">'+
+             '</div>'+
+             '<h1 id="firstHeading" class="firstHeading" style="font-size:25px; color:cadetblue; font-weight:bold;">College Eight Study Room</h1>'+
+             '<img src= "http://people.ucsc.edu/~kercoffm/porter%20cafe.jpg">'+
+             '<div id="bodyContent">'+
+             '<p></p>'+
+             '</div>'+
+             '</div>'],
+             ['<div class= "map-info-window">'+
+             '<div id="content">'+
+             '<div id="siteNotice">'+
+             '</div>'+
+             '<h1 id="firstHeading" class="firstHeading" style="font-size:25px; color:cadetblue; font-weight:bold;">Kresge Writing Center</h1>'+
+             '<img src= "http://people.ucsc.edu/~kercoffm/owls%20nest.jpg">'+
+             '<div id="bodyContent">'+
+             '<p></p>'+
+             '</div>'+
+             '</div>'],
+            ['<div class= "map-info-window">'+
+             '<div id="content">'+
+             '<div id="siteNotice">'+
+             '</div>'+
+             '<h1 id="firstHeading" class="firstHeading" style="font-size:25px; color:cadetblue; font-weight:bold;">Merill Academic Sucess</h1>'+
+             '<img src= "http://people.ucsc.edu/~kercoffm/amazon%20juices.jpg">'+
+             '<div id="bodyContent">'+
+             '<p></p>'+
+             '</div>'+
+             '</div>']  
+           
+             ];
+             
+             var infoWindow = new google.maps.InfoWindow({content: infoWindowContent});
+             /*var markersArray = [];*/ 
+             /*var markers= {}; */
+             var latLng = {lat: 36.995567, lng: -122.058824}; 
+             var myLatLng = latLng; 
+  
+             var map = new google.maps.Map(document.getElementById('map'),  
+             { 
+             zoom: 15, 
+             center: myLatLng 
+             }); 
+  
+             var marker, i; 
+             var id= "programs"; 
+             for (i = 0; i<coordinates.length; i++) 
+             {  
+                 var id = "programs" +i;    
+                 marker = new google.maps.Marker( 
+                 { 
+                     position: new google.maps.LatLng(coordinates[i][0], coordinates[i][1]), 
+                     title: coordinates[i][2],
+                     map:map, 
+                     id: id, 
+                     icon:"http://people.ucsc.edu/~kercoffm/newSlugLogoIcon.png", 
+                     url:coordinates[i][3], 
+                     zIndex:100, 
+                     info: infoWindowContent[i][0]
+                 }); 
+                  
+                google.maps.event.addListener(marker,"mouseover", function() {
+                infoWindow.setContent(this.info);
+                infoWindow.open(map,this);
+                 });
+                 
+                 google.maps.event.addListener(marker,"mouseout",function(event) 
+                 { 
+                     this.setIcon("http://people.ucsc.edu/~kercoffm/newSlugLogoIcon.png"); 
+                 }); 
+                 marker.addListener('click', function() {
+                 infoWindow.open(map, marker);
+                 infoWindow.open(map,this);
+              });    
+           } 
+         } 
+          
+                 google.maps.event.addDomListener(window, "load", initialize);  
+         </script> 
+         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaafZTEDo9ORQqbE-aw7x1y0GlLizn708&callback=initMap" 
+     async defer></script> 
+          </center> 
+     </section> 
+ 
+ 
+    
+   </body> 
+</html> 
+
