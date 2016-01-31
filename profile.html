@@ -1,1 +1,158 @@
+ <!DOCTYPE html> 
+ <html lang="en-us"> 
+   <head> 
+     <meta charset="UTF-8"> 
+     <title>MyGeoCruz</title>
+       <style>
+         
+ul {
+    list-style-type: impact;
+    font-size: 150%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #00CCCC;
+}
+
+li {
+    float: left;
+}
+   
+           
+ul ul {
+    position:absolute;
+    display: none;
+}
+
+li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+
+
+
+li:hover ul{
+    display:block;   
+}
+</style>
+   </head> 
+   <body>
+     
+    <div class="allMenus">
+
+       <ul>
+            
+           <li><a href="#"><b>Locations</b></a>
+            <ul>
+                <li><a href="colleges.html">Colleges</a></li>
+                <li><a href="libraries.html">Libraries</a></li>
+                <li><a href="cafes.html">Cafes</a></li>
+                <li><a href="diningHalls.html">Dining Halls</a></li>
+                <li><a href="studyspots.html">Study Spots</a></li>
+                <li><a href="hiddenSpots.html">Hidden Spots</a></li>
+                <li><a href="funSpots.html">Fun Spots</a></li>
+               </ul>
+           </li>
+           <li><a href="#"><b>Weekly Slug Pictures</b></a>
+                 <ul>
+                    <li><a href="#">This Week's Favorite's Pictures</a></li>
+               </ul>
+           </li>
+           <li><a href="#"><b>Events</b></a>
+               <ul>
+                 <li><a href="#">Weekly Events</a></li>
+               </ul>
+           </li>
+           <!--<ul style="float:right;list-style-type:none;">-->
+           <li><a class="active" href="#"><b>About</b></a>
+                 <ul>
+                <li><a href="#">Mission Statement</a></li>
+                <li><a href="#">Creators</a></li>  
+               </ul>
+               </li>
+           <li><a href="#"><b>Login/Sign-Up</b></a></li> 
+            <!--</ul>-->   
+        </ul>
+    </div> 
+        <style> 
+           html {  
+   background: url(http://people.ucsc.edu/~kercoffm/WeeklySlugPictures/BACKGROUND3.png) no-repeat center center fixed;  
+   -webkit-background-size: cover; 
+   -moz-background-size: cover; 
+   -o-background-size: cover; 
+   background-size: cover; 
+ } 
+      
+         .page-header button{ 
+          font: 50px Impact, serif; 
+          } 
+       </style>
+          
+        <center> 
+   <h1 class="project-name" style="color: #00CCCC; font-size: 600%;">My Geo Cruz</h1>
+       </center>
+       
+    <h3>Profile</h3>
+        <p id="demo"></p>
+        <p id = "classes"> </p>
+        <script>
+
+          //make users: name, username,classes (JSON)
+      var user = {"profile":[ 
+          {"name":"Sammy Slug","username":"slugg123","class1":"Chem 1A" ,"class2":"Math" ,"class3":"History" }, 
+          {"name":"Anna Smith","username":"asmith","class1":"History","class2":"Math" ,"class3":"Chem 1A"  }, 
+          {"name":"Kelsey Coffman","username":"kercoffman","class1":"Math","class2":"History","class3":"History" }, 
+          {"name":"Peter Lee","username":"peteL","class1":"Chem 1A","class2":"Math","class3":"History" } ]};
+
+
+            //get all elements, then put in a profile page
+            
+              document.getElementById("demo").innerHTML =
+             "Name: "+ user.profile[0].name + "<br>" + 
+              "username: "+ user.profile[0].username + "<br>" + 
+              "<u> Classes: </u>" + "<br>" + user.profile[0].class1+ "<br>" + 
+              user.profile[0].class2 + "<br>" + 
+              user.profile[0].class3 + "<br>" ;
+            
+
+        var ucscClass = {"myClass":[[], [], [] ]};
+ 
+        //auto save name to class directory
+            
+            var i = 0; 
+             while(i<4)
+            {
+            if ( (user.profile[i].class1 === "Chem 1A") || (user.profile[i].class2 === "Chem 1A") || (user.profile[i].class3 === "Chem 1A") )
+                {
+                    ucscClass.myClass[0] += user.profile[i].name + "<br>"; 
+                }
+            if ( (user.profile[i].class1 === "Math") || (user.profile[i].class2 === "Math") || (user.profile[i].class3 === "Math"))
+                {
+                    ucscClass.myClass[1] += user.profile[i].name + "<br>"; 
+                }
+            if (user.profile[i].class1 === "History" || user.profile[i].class2 === "History" || user.profile[i].class3 === "History" )
+                {
+                    ucscClass.myClass[2] += user.profile[i].name + "<br>"; 
+                }
+                i++;
+            }
+            
+            document.getElementById("classes").innerHTML =
+                "<h2>Find Your Classmates! </h2>" + " <br> "+ "<u>Chem 1A</u> " + "<br>" + ucscClass.myClass[0]
+                    + " <br> "+ "<u>Math</u> " + "<br>" + ucscClass.myClass[1]
+            + " <br> "+ "<u>History</u> " + "<br>" + ucscClass.myClass[2];
+            
+        </script>
+            
+
+            
+   </body> 
+</html> 
+      
+
 
