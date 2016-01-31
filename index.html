@@ -325,31 +325,142 @@ window.onclick = function(event) {
          
          /* Info Box informations */
          
-          var contentString = '<div class= "map-info-window">'+
-                 '<div id="content">'+
-      '<div id="siteNotice">'+
-      '</div>'+
-      '<h1 id="firstHeading" class="firstHeading">Uluru</h1>'+
-      '<div id="bodyContent">'+
-      '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
-      'sandstone rock formation in the southern part of the '+
-      'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
-      'south west of the nearest large town, Alice Springs; 450&#160;km '+
-      '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '+
-      'features of the Uluru - Kata Tjuta National Park. Uluru is '+
-      'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
-      'Aboriginal people of the area. It has many springs, waterholes, '+
-      'rock caves and ancient paintings. Uluru is listed as a World '+
-      'Heritage Site.</p>'+
-      '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
-      'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
-      '(last visited June 22, 2009).</p>'+
-      '</div>'+
-      '</div>';
-
-             var infoWindow = new google.maps.InfoWindow({
-               content: contentString,
-             });
+           var infoWindowContent =[
+            ['<div class= "map-info-window">'+
+             '<div id="content">'+
+             '<div id="siteNotice">'+
+             '</div>'+
+             '<p id="firstHeading" class="firstHeading" style="font-size:25px; color:cadetblue; font-weight:bold;">McHenry Library</p>'+
+             '<img src= "http://people.ucsc.edu/~kercoffm/130213_mchenry_library_01.jpg">'+
+             '<div id="bodyContent">'+
+             '<p>Founded :1968</p>'+
+             '</div>'+
+             '</div>'],
+            ['<div class= "map-info-window">'+
+             '<div id="content">'+
+             '<div id="siteNotice">'+
+             '</div>'+
+             '<h1 id="firstHeading" class="firstHeading" style="font-size:25px; color:cadetblue; font-weight:bold;">Cowell College</h1>'+
+             '<img src= "http://people.ucsc.edu/~kercoffm/cowellLocation.jpg">'+
+             '<div id="bodyContent">'+
+             '<p>Founded :1965</p>'+
+             '</div>'+
+             '</div>'],  
+            ['<div class= "map-info-window">'+
+             '<div id="content">'+
+             '<div id="siteNotice">'+
+             '</div>'+
+             '<h1 id="firstHeading" class="firstHeading" style="font-size:25px; color:cadetblue; font-weight:bold;">Crown College</h1>'+
+             '<img src= "http://people.ucsc.edu/~kercoffm/crownCollege.png">'+
+             '<div id="bodyContent">'+
+             '<p>Founded :1967</p>'+
+             '</div>'+
+             '</div>'],
+             ['<div class= "map-info-window">'+
+             '<div id="content">'+
+             '<div id="siteNotice">'+
+             '</div>'+
+             '<h1 id="firstHeading" class="firstHeading" style="font-size:25px; color:cadetblue; font-weight:bold;">College Eight</h1>'+
+             '<img src= "http://people.ucsc.edu/~kercoffm/collegeEight.png">'+
+             '<div id="bodyContent">'+
+             '<p>Founded :1972</p>'+
+             '</div>'+
+             '</div>'],
+            ['<div class= "map-info-window">'+
+             '<div id="content">'+
+             '<div id="siteNotice">'+
+             '</div>'+
+             '<h1 id="firstHeading" class="firstHeading" style="font-size:25px; color:cadetblue; font-weight:bold;">Stevenson College</h1>'+
+             '<img src= "http://people.ucsc.edu/~kercoffm/stevensonCollege.png">'+
+             '<div id="bodyContent">'+
+             '<p>Founded :1966</p>'+
+             '</div>'+
+             '</div>'],  
+            ['<div class= "map-info-window">'+
+             '<div id="content">'+
+             '<div id="siteNotice">'+
+             '</div>'+
+             '<h1 id="firstHeading" class="firstHeading" style="font-size:25px; color:cadetblue; font-weight:bold;">Merill College</h1>'+
+             '<img src= "http://people.ucsc.edu/~kercoffm/merril%20college.png">'+
+             '<div id="bodyContent">'+
+             '<p>Founded :1968</p>'+
+             '</div>'+
+             '</div>'], 
+            ['<div class= "map-info-window">'+
+             '<div id="content">'+
+             '<div id="siteNotice">'+
+             '</div>'+
+             '<h1 id="firstHeading" class="firstHeading" style="font-size:25px; color:cadetblue; font-weight:bold;">Porter College</h1>'+
+             '<img src= "http://people.ucsc.edu/~kercoffm/porterCollege.png">'+
+             '<div id="bodyContent">'+
+             '<p>Founded :1969</p>'+
+             '</div>'+
+             '</div>'],
+            ['<div class= "map-info-window">'+
+             '<div id="content">'+
+             '<div id="siteNotice">'+
+             '</div>'+
+             '<h1 id="firstHeading" class="firstHeading" style="font-size:25px; color:cadetblue; font-weight:bold;">Kresge College</h1>'+
+             '<img src= "http://people.ucsc.edu/~kercoffm/kresgeCollege.png">'+
+             '<div id="bodyContent">'+
+             '<p>Founded :1971</p>'+
+             '</div>'+
+             '</div>'],
+            ['<div class= "map-info-window">'+
+             '<div id="content">'+
+             '<div id="siteNotice">'+
+             '</div>'+
+             '<h1 id="firstHeading" class="firstHeading"style="font-size:25px; color:cadetblue; font-weight:bold;">Oakes College</h1>'+
+             '<img src= "http://people.ucsc.edu/~kercoffm/oaksCollege.png">'+
+             '<div id="bodyContent" style="font-size:14">'+
+             '<p>Founded :1972</p>'+
+             '</div>'+
+             '</div>'],
+            ['<div class= "map-info-window">'+
+             '<div id="content">'+
+             '<div id="siteNotice">'+
+             '</div>'+
+             '<h1 id="firstHeading" class="firstHeading"style="font-size:25px; color:cadetblue; font-weight:bold;">College Nine</h1>'+
+             '<img src= "http://people.ucsc.edu/~kercoffm/collegeNine.png">'+
+             '<div id="bodyContent">'+
+             '<p>Founded :2000</p>'+
+             '</div>'+
+             '</div>'],
+             ['<div class= "map-info-window">'+
+             '<div id="content">'+
+             '<div id="siteNotice">'+
+             '</div>'+
+             '<h1 id="firstHeading" class="firstHeading"style="font-size:25px; color:cadetblue; font-weight:bold;">College Ten</h1>'+
+             '<img src= "http://people.ucsc.edu/~kercoffm/collegeTen.png">'+
+             '<div id="bodyContent">'+
+             '<p>Founded :2002</p>'+
+             '</div>'+
+             '</div>'],
+            ['<div class= "map-info-window">'+
+             '<div id="content">'+
+             '<div id="siteNotice">'+
+             '</div>'+
+             '<h1 id="firstHeading" class="firstHeading"style="font-size:25px; color:cadetblue; font-weight:bold;">Opers Gym</h1>'+
+             '<img src= "http://people.ucsc.edu/~kercoffm/OPERSgym.png">'+
+             '<div id="bodyContent">'+
+             '<p>Monday-Thursday 6:30am-11:00pm</p>'+
+             '<p>Friday 6:30am-8:00pm</p>'+
+             '<p>Saturday and Sunday: 10:00 am- 6:00pm</p>'+
+             '</div>'+
+             '</div>'],
+            ['<div class= "map-info-window">'+
+             '<div id="content">'+
+             '<div id="siteNotice">'+
+             '</div>'+
+             '<h1 id="firstHeading" class="firstHeading"style="font-size:25px; color:cadetblue; font-weight:bold;">Jack Baskin School of Engineering</h1>'+
+             '<img src= "http://people.ucsc.edu/~kercoffm/JackBaskin.png">'+
+             '<div id="bodyContent">'+
+             '<p>Founded :1997</p>'+
+             '</div>'+
+             '</div>']
+             ];
+             
+             var infoWindow = new google.maps.InfoWindow({content: infoWindowContent});
              /*var markersArray = [];*/ 
              /*var markers= {}; */
              var latLng = {lat: 36.995567, lng: -122.058824}; 
@@ -375,12 +486,14 @@ window.onclick = function(event) {
                      icon:"http://people.ucsc.edu/~kercoffm/newSlugLogoIcon.png", 
                      url:coordinates[i][3], 
                      zIndex:100 
+                     info: infoWindowContent[i][0]
                  }); 
                   
-                 google.maps.event.addListener(marker,"mouseover", function(event) 
-                 { 
-                     this.setIcon("http://people.ucsc.edu/~kercoffm/cowellLocation.jpg"); 
-                 }); 
+                google.maps.event.addListener(marker,"mouseover", function() {
+                infoWindow.setContent(this.info);
+                infoWindow.open(map,this);
+                 });
+                 
                  google.maps.event.addListener(marker,"mouseout",function(event) 
                  { 
                      this.setIcon("http://people.ucsc.edu/~kercoffm/newSlugLogoIcon.png"); 
